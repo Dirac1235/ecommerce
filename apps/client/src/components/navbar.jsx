@@ -19,7 +19,7 @@ import {
   
   export default function NavBar() {
     return (
-      <Menubar>
+      <Menubar className="p-10">
         <MenubarMenu>
           <MenubarTrigger>Home</MenubarTrigger>
           <MenubarContent>
@@ -72,7 +72,7 @@ import {
           </MenubarContent>
         </MenubarMenu>
         <MenubarMenu>
-          <MenubarTrigger>View</MenubarTrigger>
+          <MenubarTrigger>Product List</MenubarTrigger>
           <MenubarContent>
             <MenubarCheckboxItem>Always Show Bookmarks Bar</MenubarCheckboxItem>
             <MenubarCheckboxItem checked>

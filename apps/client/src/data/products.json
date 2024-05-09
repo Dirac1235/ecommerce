@@ -18,7 +18,6 @@
       "id": 3,
       "name": "Product 3",
       "image": "vintage.jpg",
-
       "description": "Description of product 3",
       "price": 30.99
     },
@@ -26,7 +25,6 @@
       "id": 2,
       "name": "Product 2",
       "image": "vintage.jpg",
-
       "description": "Description of product 2",
       "price": 20.99
     },
@@ -34,7 +32,6 @@
       "id": 3,
       "name": "Product 3",
       "image": "vintage.jpg",
-
       "description": "Description of product 3",
       "price": 30.99
     },

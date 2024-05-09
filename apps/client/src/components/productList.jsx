@@ -2,6 +2,7 @@ import { Button } from "./ui/button"
 
 
 const ProductsPage = ({ products }) => {
+    
   return (
     <div >
       <h1>Products</h1>
@@ -13,7 +14,7 @@ const ProductsPage = ({ products }) => {
             <h2>{product.name}</h2>
             <p>{product.description}</p>
             <p>Price: {product.price}</p>
-            <Button variant="outline">Add To Cart</Button>
+            <Button >Add To Cart</Button>
 
             {/* Add more product information */}
           </li>
