@@ -1,4 +1,5 @@
 // import Cart from "../components/Cart";
+import Cart from "../components/Cart";
 import ProductsPage from "../components/productList";
 import SideCart from "../components/sidecart";
 import productsData from '../data/products.json';
@@ -9,7 +10,8 @@ import productsData from '../data/products.json';
 export default function Page() {
     return (
         <main className="container">
-            <ProductsPage products={productsData}/>
+            {/* <ProductsPage products={productsData}/> */}
+            <Cart />
         </main>
     );
 }
