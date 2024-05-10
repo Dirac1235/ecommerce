@@ -25,11 +25,15 @@ import Link from "next/link";
 
 export default function SideCart() {
   const cartData = useCart((state) => state.cartProducts);
+  const removeFromCart = useCart((state) => state.removeProductFromCart);
+  function delCart(id) {
+    removeFromCart(id);
+  }
   console.log(cartData);
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant="outline">Cart</Button>
+        <p>Cart</p>
       </SheetTrigger>
       <SheetContent className="overflow-y-auto">
         <SheetHeader>
@@ -38,9 +42,15 @@ export default function SideCart() {
         </SheetHeader>
         {cartData?.map((product) => (
           <div key={product.id}>
-            <Card className="overflow-y-auto">
+            <Card className="flex  flex-col overflow-y-auto">
+              <button
+                onClick={() => delCart(product.id)}
+                className="ml-auto mr-5 mt-1"
+              >
+                X
+              </button>
               <CardHeader>
-                <CardTitle>{product.title}</CardTitle>
+                <CardTitle>{product.name}</CardTitle>
                 <CardDescription>{product.description}</CardDescription>
               </CardHeader>
               <CardContent>
@@ -51,10 +61,14 @@ export default function SideCart() {
         ))}
 
         <SheetFooter>
-          <div className="flex flex-col items-center w-full m-5">
-            <Link className=" flex m-3 border p-3 text-sm w-64 justify-center  text-slate-100 font-bold rounded-md bg-gray-500" href="/cart">View Cart</Link>
-            <Button className="flex w-64 ">Checkout</Button>
-          </div>
+            <div className="flex flex-col items-center w-full m-5">
+          <SheetClose asChild>
+              <Button className=" flex m-3 border p-3 text-sm w-64 justify-center  text-slate-100 font-bold rounded-md bg-gray-500">
+                <Link href="/cart">View Cart</Link>
+              </Button>
+          </SheetClose>
+              <Button className="flex w-64 ">Checkout</Button>
+            </div>
         </SheetFooter>
       </SheetContent>
     </Sheet>

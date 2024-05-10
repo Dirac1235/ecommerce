@@ -1,6 +1,7 @@
 "use client"
 import { useCart } from "@app/client/data/state";
 import { Input } from "../../components/ui/input";
+import { Button } from "@app/client/components/ui/button";
 
 function Cart() {
   const cartData = useCart((state) => state.cartProducts);
@@ -9,8 +10,8 @@ function Cart() {
     <div className="container ">
       <h1 className="text-5xl m-5 p-4 border-b border-b-slate-500">Cart</h1>
       {cartData.map((product) => (
-        <a
-          href="#"
+        <div
+          
           key={product.id}
           class="flex  flex-col items-center m-10 bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl  sm:flex-row sm:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
         >
@@ -37,8 +38,9 @@ function Cart() {
             <Input className="w-10" type="text" placeholder="1" />
             <p className="ml-3">+</p>
           </div>
-        </a>
+        </div>
       ))}
+      <Button className="m-8">Checkout</Button>
     </div>
   );
 }
