@@ -50,11 +50,11 @@ export default function SideCart() {
           </div>
         ))}
 
-        <SheetFooter className="flex flex-row justify-center">
-          <Link href="/cart">View Cart</Link>
-          <SheetClose asChild>
-            <Button>Checkout</Button>
-          </SheetClose>
+        <SheetFooter>
+          <div className="flex flex-col items-center w-full m-5">
+            <Link className=" flex m-3 border p-3 text-sm w-64 justify-center  text-slate-100 font-bold rounded-md bg-gray-500" href="/cart">View Cart</Link>
+            <Button className="flex w-64 ">Checkout</Button>
+          </div>
         </SheetFooter>
       </SheetContent>
     </Sheet>
