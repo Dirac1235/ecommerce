@@ -10,8 +10,8 @@ import productsData from '../data/products.json';
 export default function Page() {
     return (
         <main className="container">
-            {/* <ProductsPage products={productsData}/> */}
-            <Cart />
+            <ProductsPage products={productsData}/>
+            {/* <Cart /> */}
         </main>
     );
 }
